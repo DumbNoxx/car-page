@@ -1,0 +1,28 @@
+{
+  "vehicles": {
+    "BMW": {
+      "age": 2023,
+      "details": "3 SERIES",
+      "price": "45,900",
+      "miles": "12,000",
+      "image": "https://i.imgur.com/cgofnaw.jpeg",
+      "badge": "Sedan"
+    },
+    "Audi": {
+      "age": 2022,
+      "details": "A3",
+      "price": "52,500",
+      "miles": "18,500",
+      "image": "https://i.imgur.com/JSyotzd.jpeg",
+      "badge": "SUV"
+    },
+    "Mercedes": {
+      "age": 2023,
+      "details": "C-Class",
+      "price": "48,200",
+      "miles": "8,900",
+      "image": "https://i.imgur.com/DkaIcB4.jpeg",
+      "badge": "Sedan"
+    }
+  }
+}

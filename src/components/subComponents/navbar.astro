@@ -6,9 +6,9 @@ import image from "../../assets/logo-r7.png";
 <nav id="navbar">
   <div class="container-profile">
     <a href="/">
-    <figure>
-      <Image src={image} alt={image} loading="eager" />
-    </figure>
+      <figure>
+        <Image src={image} alt={image.src} loading="eager" />
+      </figure>
     </a>
   </div>
   <div class="container-bar">
@@ -18,18 +18,27 @@ import image from "../../assets/logo-r7.png";
     <a href="/Contact">Contact</a>
   </div>
   <div class="container-call-now">
-  <button class="button-call-now">
-  <figure class="svg-phone">
-  <svg xmlns="http://www.w3.org/2000/svg"
-     width="24" height="24" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="2"
-     stroke-linecap="round" stroke-linejoin="round"
-     class="lucide lucide-phone-icon lucide-phone">
-  <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
-  </svg>
-  </figure>
-  <span>Call Now</span>
-  </button>
+    <button class="button-call-now">
+      <figure class="svg-phone">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-phone-icon lucide-phone"
+        >
+          <path
+            d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+          ></path>
+        </svg>
+      </figure>
+      <span>Call Now</span>
+    </button>
   </div>
 </nav>
 
@@ -40,10 +49,10 @@ import image from "../../assets/logo-r7.png";
     width: 100%;
     height: auto;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
   }
 
-  .container-profile{
+  .container-profile {
     width: 10rem;
     height: 5rem;
     & figure {
@@ -70,6 +79,7 @@ import image from "../../assets/logo-r7.png";
     & a {
       text-decoration: none;
       color: white;
+      transition: 0.2s ease;
 
       &:hover {
         color: #005bc1;
@@ -90,6 +100,7 @@ import image from "../../assets/logo-r7.png";
       padding: 0.5rem;
       border-radius: 0.5rem;
       color: #005bc1;
+      transition: 0.2s ease;
 
       &:hover {
         color: white;
@@ -98,11 +109,11 @@ import image from "../../assets/logo-r7.png";
       }
 
       & figure {
-      margin: 0;
-      margin-left: 0.3rem;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
+        margin: 0;
+        margin-left: 0.3rem;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
       }
 
       & svg {
@@ -112,7 +123,7 @@ import image from "../../assets/logo-r7.png";
       }
 
       & span {
-        margin-left: .6rem;
+        margin-left: 0.6rem;
         font-size: 15px;
         font-weight: 550;
       }

@@ -1,0 +1,90 @@
+---
+
+---
+
+<div class="container-search">
+  <label for="car-select">Find Your Perfect Car</label>
+  <div class="container-selects">
+    <select name="cars-brand" aria-labelledby="car-select" class="car-select">
+      <option selected disabled hidden>Select Brand</option>
+      <option value="bmw">BMW</option>
+      <option value="audi">Audi</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="tesla">Tesla</option>
+      <option value="lexus">Lexus</option>
+      <option value="ford">Ford</option>
+    </select>
+    <select name="cars-type" aria-labelledby="car-select" class="car-select">
+      <option selected disabled hidden>Card Type</option>
+      <option value="sedan">Sedan</option>
+      <option value="suv">SUV</option>
+      <option value="truck">Truck</option>
+      <option value="coupe">Coupe</option>
+      <option value="convertible">Convertible</option>
+    </select>
+    <select name="cars-price" aria-labelledby="car-select" class="car-select">
+      <option selected disabled hidden>Price Range</option>
+      <option value="under">Under $30,000</option>
+      <option value="mid">$30,000 - $50,000</option>
+      <option value="inter">$50,000 - $70,000</option>
+      <option value="over">Over $70,000</option>
+    </select>
+    <button type="submit" class="button-search">Search Cars</button>
+  </div>
+</div>
+
+<style>
+  .container-search {
+    max-width: 80rem;
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 5px 32px 38px -5px rgba(0, 0, 0, 0.33);
+    -webkit-box-shadow: 5px 32px 38px -5px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 5px 32px 38px -5px rgba(0, 0, 0, 0.33);
+
+    & label {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    & .container-selects {
+      margin-top: 1rem;
+
+      & .car-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%236f6f6f" stroke-width="2" stroke-linecap="round"><path d="M7 10l5 5 5-5"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px;
+        padding-right: 30px;
+        width: 21rem;
+        height: 2.5rem;
+        background-color: white;
+        border-color: #dedede;
+        border-width: 1px;
+        border-radius: 0.5rem;
+      }
+
+      & .button-search {
+        width: 15rem;
+        height: 2.3rem;
+        border: none;
+        background-color: #005bc1;
+        color: white;
+        border-radius: 0.5rem;
+        transition: 0.2s ease;
+        &:hover {
+          background-color: #0051ac;
+        }
+      }
+    }
+  }
+</style>

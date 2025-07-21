@@ -1,0 +1,170 @@
+---
+import data from "../../libs/jsons/date-features.json";
+import { Image } from "astro:assets";
+---
+
+<article class="featured-section">
+  <h2 class="title-section">Featured Vehicles</h2>
+  <p class="description-section">
+    Discover our handpicked selection of premium vehicles, each thoroughly
+    inspected and ready for the road
+  </p>
+  <div class="container-cars">
+    {
+      Object.entries(data).map(([_key, date]) =>
+        Object.entries(date).map(([key, dats]) => (
+          <div class="card-car">
+            <div class="section-image">
+              <span class="badge-car">{dats.badge}</span>
+              <figure>
+                <Image
+                  src={dats.image}
+                  alt={dats.details}
+                  width="540"
+                  height="540"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="section-details">
+              <p class="title-car">
+                {dats.age} {key} {dats.details}
+              </p>
+              <div class="numers-car">
+                <p class="price-car">
+                  <strong>${dats.price}</strong>
+                </p>
+                <p class="miles-car">{dats.miles} miles</p>
+              </div>
+              <button class="button-car-select">View Details</button>
+            </div>
+          </div>
+        )),
+      )
+    }
+  </div>
+</article>
+
+<style>
+  .featured-section {
+    margin-top: 10rem;
+    & .title-section {
+      font-size: 2rem;
+      text-align: center;
+    }
+    & .description-section {
+      font-size: 1rem;
+      width: 44%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #8c8c8c;
+      font-weight: bold;
+    }
+
+    & .container-cars {
+      display: flex;
+      max-width: 80rem;
+      width: 100%;
+      margin: 0 auto;
+      gap: 1.5rem;
+
+      & .card-car {
+        & .badge-car {
+          position: absolute;
+          top: 6px;
+          left: 8px;
+          z-index: 1;
+          background: blue;
+          font-weight: bold;
+          color: white;
+          padding: 4px 18px;
+          border-radius: 20px;
+          font-size: 0.8em;
+          transition: 0.2s ease;
+
+          &:hover {
+            background-color: #4c4c4c;
+          }
+        }
+        transition: 0.25s ease;
+        width: 100%;
+        border: 1px solid darkgray;
+        border-radius: 0.5rem;
+
+        &:hover {
+          box-shadow: 10px 10px 56px -16px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 10px 10px 56px -16px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 10px 10px 56px -16px rgba(0, 0, 0, 0.75);
+        }
+
+        & .section-image {
+          position: relative;
+          border-radius: 0.5rem;
+          height: 230px;
+        }
+
+        & figure {
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          border-radius: 0.5rem 0.5rem 0 0;
+          overflow: hidden;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        & .section-details {
+          padding: 0 1rem;
+          display: flex;
+          flex-direction: column;
+
+          & .title-car {
+            font-size: 1.5rem;
+            margin-bottom: -1rem;
+            font-weight: bold;
+          }
+
+          & .numers-car {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & .price-car {
+              color: #005bc1;
+              font-size: 1.4rem;
+              font-weight: bold;
+            }
+
+            & .miles-car {
+              color: darkgray;
+              font-weight: bold;
+            }
+          }
+
+          & .button-car-select {
+            background-color: #25283e;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            width: 100%;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            transition: 0.2s ease;
+
+            &:hover {
+              background-color: #2c314f;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
